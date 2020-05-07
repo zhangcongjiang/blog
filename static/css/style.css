@@ -7052,7 +7052,7 @@ a.badge-inverse:hover .label-arrow, a.label-inverse:hover .label-arrow {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
     overflow: hidden
 }
 
