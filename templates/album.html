@@ -40,13 +40,13 @@
                                         <span>
                                         <a href="javascript:" class="hvr-icon-buzz-out no-underline"
                                            style="color: #C0C1C3; float: right"
-                                           onclick="animocons_handler(this, '/extends/increase-likes/album/7', 7, 42, 'album')"
+                                           onclick="animocons_handler(this, '/extends/increase-likes/album/7', {{ album.num }}, 42, 'album')"
                                         >
                                             <button class="icobutton icobutton_7">
                                                 <i class="fas fa-heart hvr-icon"></i>
                                             </button>
                                             <span id="likes_7" class="icobutton--heart"
-                                                  data-id="7"
+                                                  data-id="{{ album.num }}"
                                                   data-type="album">
                                                 {{ album.loves }}
                                             </span>
@@ -78,137 +78,137 @@
                         </div>
                     {% endfor %}
                     {##}
-                    {#                    <div class="card hvr-float-shadow" style="word-break: break-all;">#}
-                    {#                        <!-- Button trigger modal -->#}
-                    {#                        <a href="javascript:"#}
-                    {#                           data-toggle="modal"#}
-                    {#                           data-target="#img_7"#}
-                    {#                           class="card-link text-muted"#}
-                    {#                        >#}
-                    {#                            <div style="overflow: hidden">#}
-                    {#                                <img src="#}
-                    {##}
-                    {#                                http://blog.dusaiphoto.com/%E4%B9%9D%E5%AF%A8%E6%B2%9F01.jpg#}
-                    {##}
-                    {#                                "#}
-                    {#                                     style="max-width: 100%; transition-duration: 1s;"#}
-                    {#                                     alt="图片"#}
-                    {#                                     class="card-img-top hvr-grow"#}
-                    {#                                >#}
-                    {#                            </div>#}
-                    {#                            <div class="card-body">#}
-                    {#                                <h5 class="card-title">#}
-                    {#                                    雪与海子#}
-                    {#                                    <span>#}
-                    {#                                        <a href="javascript:" class="hvr-icon-buzz-out no-underline"#}
-                    {#                                           style="color: #C0C1C3; float: right"#}
-                    {#                                           onclick="animocons_handler(this, '/extends/increase-likes/album/7', 7, 42, 'album')"#}
-                    {#                                        >#}
-                    {#                                            <button class="icobutton icobutton_7">#}
-                    {#                                                <i class="fas fa-heart hvr-icon"></i>#}
-                    {#                                            </button>#}
-                    {#                                            <span id="likes_7" class="icobutton--heart"#}
-                    {#                                                  data-id="7"#}
-                    {#                                                  data-type="album">#}
-                    {#                                                42#}
-                    {#                                            </span>#}
-                    {#                                        </a>#}
-                    {#                                    </span>#}
-                    {#                                </h5>#}
-                    {#                            </div>#}
-                    {#                        </a>#}
-                    {#                    </div>#}
-                    {##}
-                    {#                    <!-- Modal -->#}
-                    {#                    <div class="modal fade" id="img_7" tabindex="-1" role="dialog"#}
-                    {#                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">#}
-                    {#                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">#}
-                    {#                            <div class="modal-content">#}
-                    {#                                <div class="modal-body">#}
-                    {#                                    <img src="#}
-                    {##}
-                    {#                                        http://blog.dusaiphoto.com/%E4%B9%9D%E5%AF%A8%E6%B2%9F01.jpg#}
-                    {##}
-                    {#                                        "#}
-                    {#                                         style="max-width: 100%"#}
-                    {#                                         alt="img"#}
-                    {#                                    >#}
-                    {#                                </div>#}
-                    {#                                <div class="modal-body text-muted">#}
-                    {#                                    <p>#}
-                    {#                                        冬天没有阳光的照射，九寨沟的海子失去了颜色，暗淡又不好看。#}
-                    {#                                        但如果下了雪，那就不一样了。白色世界，海子平静又清澈见底。这是在秋季见不到的。#}
-                    {#                                    </p>#}
-                    {#                                </div>#}
-                    {#                            </div>#}
-                    {#                        </div>#}
-                    {#                    </div>#}
-                    {##}
-                    {#                    <div class="card hvr-float-shadow" style="word-break: break-all;">#}
-                    {#                        <!-- Button trigger modal -->#}
-                    {#                        <a href="javascript:"#}
-                    {#                           data-toggle="modal"#}
-                    {#                           data-target="#img_8"#}
-                    {#                           class="card-link text-muted"#}
-                    {#                        >#}
-                    {#                            <div style="overflow: hidden">#}
-                    {#                                <img src="#}
-                    {##}
-                    {#                                http://blog.dusaiphoto.com/%E4%B9%9D%E5%AF%A8%E6%B2%9F02.jpg#}
-                    {##}
-                    {#                                "#}
-                    {#                                     style="max-width: 100%; transition-duration: 1s;"#}
-                    {#                                     alt="图片"#}
-                    {#                                     class="card-img-top hvr-grow"#}
-                    {#                                >#}
-                    {#                            </div>#}
-                    {#                            <div class="card-body">#}
-                    {#                                <h5 class="card-title">#}
-                    {#                                    水墨#}
-                    {#                                    <span>#}
-                    {#                                        <a href="javascript:" class="hvr-icon-buzz-out no-underline"#}
-                    {#                                           style="color: #C0C1C3; float: right"#}
-                    {#                                           onclick="animocons_handler(this, '/extends/increase-likes/album/8', 8, 17, 'album')"#}
-                    {#                                        >#}
-                    {#                                            <button class="icobutton icobutton_8">#}
-                    {#                                                <i class="fas fa-heart hvr-icon"></i>#}
-                    {#                                            </button>#}
-                    {#                                            <span id="likes_8" class="icobutton--heart"#}
-                    {#                                                  data-id="8"#}
-                    {#                                                  data-type="album">#}
-                    {#                                                17#}
-                    {#                                            </span>#}
-                    {#                                        </a>#}
-                    {#                                    </span>#}
-                    {#                                </h5>#}
-                    {#                            </div>#}
-                    {#                        </a>#}
-                    {#                    </div>#}
-                    {##}
-                    {#                    <!-- Modal -->#}
-                    {#                    <div class="modal fade" id="img_8" tabindex="-1" role="dialog"#}
-                    {#                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">#}
-                    {#                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">#}
-                    {#                            <div class="modal-content">#}
-                    {#                                <div class="modal-body">#}
-                    {#                                    <img src="#}
-                    {##}
-                    {#                                        http://blog.dusaiphoto.com/%E4%B9%9D%E5%AF%A8%E6%B2%9F02.jpg#}
-                    {##}
-                    {#                                        "#}
-                    {#                                         style="max-width: 100%"#}
-                    {#                                         alt="img"#}
-                    {#                                    >#}
-                    {#                                </div>#}
-                    {#                                <div class="modal-body text-muted">#}
-                    {#                                    <p>#}
-                    {#                                        长海结了冰，白的刺眼。山也变了冻土，黑的幽深。雪里九寨，仿佛水墨之中。#}
-                    {#                                    </p>#}
-                    {#                                </div>#}
-                    {#                            </div>#}
-                    {#                        </div>#}
-                    {#                    </div>#}
-                    {##}
+{#                                        <div class="card hvr-float-shadow" style="word-break: break-all;">#}
+{#                                            <!-- Button trigger modal -->#}
+{#                                            <a href="javascript:"#}
+{#                                               data-toggle="modal"#}
+{#                                               data-target="#img_7"#}
+{#                                               class="card-link text-muted"#}
+{#                                            >#}
+{#                                                <div style="overflow: hidden">#}
+{#                                                    <img src="#}
+{##}
+{#                                                    http://blog.dusaiphoto.com/%E4%B9%9D%E5%AF%A8%E6%B2%9F01.jpg#}
+{##}
+{#                                                    "#}
+{#                                                         style="max-width: 100%; transition-duration: 1s;"#}
+{#                                                         alt="图片"#}
+{#                                                         class="card-img-top hvr-grow"#}
+{#                                                    >#}
+{#                                                </div>#}
+{#                                                <div class="card-body">#}
+{#                                                    <h5 class="card-title">#}
+{#                                                        雪与海子#}
+{#                                                        <span>#}
+{#                                                            <a href="javascript:" class="hvr-icon-buzz-out no-underline"#}
+{#                                                               style="color: #C0C1C3; float: right"#}
+{#                                                               onclick="animocons_handler(this, '/extends/increase-likes/album/7', 7, 42, 'album')"#}
+{#                                                            >#}
+{#                                                                <button class="icobutton icobutton_7">#}
+{#                                                                    <i class="fas fa-heart hvr-icon"></i>#}
+{#                                                                </button>#}
+{#                                                                <span id="likes_7" class="icobutton--heart"#}
+{#                                                                      data-id="7"#}
+{#                                                                      data-type="album">#}
+{#                                                                    42#}
+{#                                                                </span>#}
+{#                                                            </a>#}
+{#                                                        </span>#}
+{#                                                    </h5>#}
+{#                                                </div>#}
+{#                                            </a>#}
+{#                                        </div>#}
+{##}
+{#                                        <!-- Modal -->#}
+{#                                        <div class="modal fade" id="img_7" tabindex="-1" role="dialog"#}
+{#                                             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">#}
+{#                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">#}
+{#                                                <div class="modal-content">#}
+{#                                                    <div class="modal-body">#}
+{#                                                        <img src="#}
+{##}
+{#                                                            http://blog.dusaiphoto.com/%E4%B9%9D%E5%AF%A8%E6%B2%9F01.jpg#}
+{##}
+{#                                                            "#}
+{#                                                             style="max-width: 100%"#}
+{#                                                             alt="img"#}
+{#                                                        >#}
+{#                                                    </div>#}
+{#                                                    <div class="modal-body text-muted">#}
+{#                                                        <p>#}
+{#                                                            冬天没有阳光的照射，九寨沟的海子失去了颜色，暗淡又不好看。#}
+{#                                                            但如果下了雪，那就不一样了。白色世界，海子平静又清澈见底。这是在秋季见不到的。#}
+{#                                                        </p>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{##}
+{#                                        <div class="card hvr-float-shadow" style="word-break: break-all;">#}
+{#                                            <!-- Button trigger modal -->#}
+{#                                            <a href="javascript:"#}
+{#                                               data-toggle="modal"#}
+{#                                               data-target="#img_8"#}
+{#                                               class="card-link text-muted"#}
+{#                                            >#}
+{#                                                <div style="overflow: hidden">#}
+{#                                                    <img src="#}
+{##}
+{#                                                    http://blog.dusaiphoto.com/%E4%B9%9D%E5%AF%A8%E6%B2%9F02.jpg#}
+{##}
+{#                                                    "#}
+{#                                                         style="max-width: 100%; transition-duration: 1s;"#}
+{#                                                         alt="图片"#}
+{#                                                         class="card-img-top hvr-grow"#}
+{#                                                    >#}
+{#                                                </div>#}
+{#                                                <div class="card-body">#}
+{#                                                    <h5 class="card-title">#}
+{#                                                        水墨#}
+{#                                                        <span>#}
+{#                                                            <a href="javascript:" class="hvr-icon-buzz-out no-underline"#}
+{#                                                               style="color: #C0C1C3; float: right"#}
+{#                                                               onclick="animocons_handler(this, '/extends/increase-likes/album/8', 8, 17, 'album')"#}
+{#                                                            >#}
+{#                                                                <button class="icobutton icobutton_8">#}
+{#                                                                    <i class="fas fa-heart hvr-icon"></i>#}
+{#                                                                </button>#}
+{#                                                                <span id="likes_8" class="icobutton--heart"#}
+{#                                                                      data-id="8"#}
+{#                                                                      data-type="album">#}
+{#                                                                    17#}
+{#                                                                </span>#}
+{#                                                            </a>#}
+{#                                                        </span>#}
+{#                                                    </h5>#}
+{#                                                </div>#}
+{#                                            </a>#}
+{#                                        </div>#}
+{##}
+{#                                        <!-- Modal -->#}
+{#                                        <div class="modal fade" id="img_8" tabindex="-1" role="dialog"#}
+{#                                             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">#}
+{#                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">#}
+{#                                                <div class="modal-content">#}
+{#                                                    <div class="modal-body">#}
+{#                                                        <img src="#}
+{##}
+{#                                                            http://blog.dusaiphoto.com/%E4%B9%9D%E5%AF%A8%E6%B2%9F02.jpg#}
+{##}
+{#                                                            "#}
+{#                                                             style="max-width: 100%"#}
+{#                                                             alt="img"#}
+{#                                                        >#}
+{#                                                    </div>#}
+{#                                                    <div class="modal-body text-muted">#}
+{#                                                        <p>#}
+{#                                                            长海结了冰，白的刺眼。山也变了冻土，黑的幽深。雪里九寨，仿佛水墨之中。#}
+{#                                                        </p>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+
                     {#                    <div class="card hvr-float-shadow" style="word-break: break-all;">#}
                     {#                        <!-- Button trigger modal -->#}
                     {#                        <a href="javascript:"#}
