@@ -4087,7 +4087,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
     z-index: 1050;
     width: 560px;
     margin-left: -280px;
-    background-color: #fff;
+    /*background-color: #fff;*/
     border: 1px solid #999;
     border: 1px solid rgba(0, 0, 0, .3);
     border-radius: 4px;
