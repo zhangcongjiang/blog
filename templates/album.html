@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load album_tags blog_tags %}
-{% block title %}夕阳丨关于自己{% endblock title %}
+{% block title %}夕阳丨记录生活{% endblock title %}
 
 {% block description %}
     <meta name="description" content="{% get_title category as bigcategory %}{{ bigcategory.description }}"/>
@@ -14,9 +14,6 @@
     <div id="wrapper">
         <div class="content-wrap">
             <div class="row mt-3">
-                {#                <div class="d-block d-sm-none mt-2 alert alert-warning">#}
-                {#                    <i class="fas fa-exclamation-triangle"></i>高清图片会消耗较多流量#}
-                {#                </div>#}
                 <div class="card-columns">
                     {% get_album_list as albumns %}
                     {% for album in albumns %}
