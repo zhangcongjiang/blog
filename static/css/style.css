@@ -2474,7 +2474,7 @@ body {
     margin: 0;
     font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
-    line-height: 20px;
+    line-height:1px;
     color: #555;
     background-color: #eee;
     overflow-x: hidden
@@ -3511,7 +3511,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
     left: 0;
     display: block;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 18px;
     max-width: 1226px
 }
 
@@ -3530,7 +3530,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 }
 
 .navbar .nav li a {
-    padding: 16px 25px;
+    padding: 16px 35px;
     color: #fff
 }
 

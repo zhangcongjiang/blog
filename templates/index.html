@@ -1,13 +1,14 @@
 ﻿﻿{% extends 'base_right.html' %}
-{% load blog_tags static comment_tags %}
+{% load blog_tags comment_tags %}
 
-{% block title %}夕阳 | Xiyang的个人博客{% endblock title %}
 {% block description %}
     <meta name="description" content="Xiyang的个人博客，记录生活的瞬间，分享学习的心得，感悟生活，留住感动，静静寻觅生活的美好"/>
 {% endblock description %}
 {% block keywords %}
     <meta name="keywords" content="Python,Django,Java,OpenDayLight,个人博客"/>
 {% endblock keywords %}
+{% block title %}{% get_title category as c %}夕阳丨{{ c.name }}{% endblock title %}
+
 {% block body %}
     <div class="content-wrap">
         <div class="content">
