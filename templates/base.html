@@ -179,6 +179,26 @@
             src="{% static 'js/lightapp.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
     <script type="text/javascript"></script>
+
+    <link href="/static/css/github.min.css" rel="stylesheet">
+    <style>
+        pre {
+            /*控制代码不换行*/
+            white-space: pre;
+            word-wrap: normal;
+        }
+
+        .cnblogs-markdown .hljs {
+            display: block;
+            overflow: auto;
+            padding: 1.3em 2em !important;
+            font-size: 16px !important;
+            background: #272822 !important;
+            color: #FFF;
+            max-height: 700px;
+        }
+
+    </style>
 </head>
 
 <body class="home blog">
@@ -186,14 +206,14 @@
 <header id="header" class="header">
     <div class="container-inner">
         <!--头部-->
-{#                    <div class="yusi-logo">#}
-{#                            <a href="/">#}
-{#                                <h1>#}
-{#                                    <span class="yusi-mono">程序员</span>#}
-{#                                    <span class="yusi-bloger">烟、酒、茶、人生</span>#}
-{#                                </h1>#}
-{#                            </a>#}
-{#                        </div>#}
+        {#                    <div class="yusi-logo">#}
+        {#                            <a href="/">#}
+        {#                                <h1>#}
+        {#                                    <span class="yusi-mono">程序员</span>#}
+        {#                                    <span class="yusi-bloger">烟、酒、茶、人生</span>#}
+        {#                                </h1>#}
+        {#                            </a>#}
+        {#                        </div>#}
 
         <!--导航条-->
         <div id="nav-header" class="navbar">
@@ -221,7 +241,7 @@
                                 {% for c in cate %}
                                     <li id="menu-item-19"
                                         class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-19">
-                                        <a href="{% url 'blog:category'  big.slug   c.slug  %}">{{ c.name }}</a></li>
+                                        <a href="{% url 'blog:category'  big.slug   c.slug %}">{{ c.name }}</a></li>
                                 {% endfor %}
                             </ul>
                         </li>
@@ -236,24 +256,24 @@
                 <!--导航条结束-->
 
                 <!--搜索框-->
-{#                <li style="float:right;">#}
-{#                    <div class="toggle-search"><i class="fa fa-search"></i></div>#}
-{#                    <div class="search-expand" style="display: none;">#}
-{#                        <div class="search-expand-inner">#}
-{#                            <form class="nav-item navbar-form mr-2 py-md-2" role="search" method="get" id="searchform"#}
-{#                                  action="{% url 'blog:search' %}">#}
-{#                                <div class="input-group">#}
-{#                                    <input type="search" name="q" class="form-control rounded-0 f-15" placeholder="搜索"#}
-{#                                           required=True>#}
-{#                                    <div class="input-group-btn">#}
-{#                                        <button class="btn btn-info rounded-0" type="submit"><i#}
-{#                                                class="fa fa-search"></i></button>#}
-{#                                    </div>#}
-{#                                </div><!-- /input-group -->#}
-{#                            </form>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </li>#}
+                {#                <li style="float:right;">#}
+                {#                    <div class="toggle-search"><i class="fa fa-search"></i></div>#}
+                {#                    <div class="search-expand" style="display: none;">#}
+                {#                        <div class="search-expand-inner">#}
+                {#                            <form class="nav-item navbar-form mr-2 py-md-2" role="search" method="get" id="searchform"#}
+                {#                                  action="{% url 'blog:search' %}">#}
+                {#                                <div class="input-group">#}
+                {#                                    <input type="search" name="q" class="form-control rounded-0 f-15" placeholder="搜索"#}
+                {#                                           required=True>#}
+                {#                                    <div class="input-group-btn">#}
+                {#                                        <button class="btn btn-info rounded-0" type="submit"><i#}
+                {#                                                class="fa fa-search"></i></button>#}
+                {#                                    </div>#}
+                {#                                </div><!-- /input-group -->#}
+                {#                            </form>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </li>#}
                 <!--搜索框结束-->
 
             </ul>
@@ -330,7 +350,7 @@
     /*300*25 创建于 2019-03-2*/
     var cpro_id = "u1959047";
 </script>
-<script src="{% static 'js/s.js' %}" type="text/javascript"></script>
+
 
 <script>
     setTimeout(function () {
@@ -353,6 +373,11 @@
             $(this).attr("src", imgs[rand]);
         })
     });
+</script>
+<script src="/static/css/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
 </script>
 </body>
 </html>

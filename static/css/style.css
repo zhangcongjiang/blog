@@ -2474,7 +2474,7 @@ body {
     margin: 0;
     font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
-    line-height:1px;
+    line-height:20px;
     color: #555;
     background-color: #eee;
     overflow-x: hidden
@@ -3475,7 +3475,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 }
 
 .navbar {
-    height: 52px;
+    height: 60px;
     background-color: #4a4a4a;
     opacity: .9;
     width: 1226px;
@@ -3530,7 +3530,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 }
 
 .navbar .nav li a {
-    padding: 16px 35px;
+    padding: 20px 25px;
     color: #fff
 }
 
@@ -4946,9 +4946,9 @@ a.badge-inverse:hover .label-arrow, a.label-inverse:hover .label-arrow {
 }
 
 .article-content {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 26px;
-    text-indent: 30px;
+    /*text-indent: 30px;*/
     word-break: break-all;
     word-wrap: break-word;
     position: relative;
@@ -4957,7 +4957,7 @@ a.badge-inverse:hover .label-arrow, a.label-inverse:hover .label-arrow {
 }
 
 .article-content h2 {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: blod;
     margin: 20px -20px 20px -24px;
     padding: 10px 20px 9px 10px;
@@ -4967,18 +4967,18 @@ a.badge-inverse:hover .label-arrow, a.label-inverse:hover .label-arrow {
 }
 
 .article-content h3 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: blod;
     margin-bottom: 10px
 }
 
 .article-content h4 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: blod
 }
 
 .article-content p {
-    margin: 0 0 15px 0
+    /*margin: 0 0 15px 0*/
 }
 
 .article-content ol, .article-content ul {
@@ -5008,7 +5008,7 @@ a.badge-inverse:hover .label-arrow, a.label-inverse:hover .label-arrow {
     border-top: solid 1px #ddd;
     border-left: solid 1px #ddd;
     width: 100%;
-    margin-bottom: 16px;
+    /*margin-bottom: 16px;*/
     text-indent: 0
 }
 

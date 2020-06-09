@@ -1,13 +1,13 @@
-﻿﻿{% extends 'base_right.html' %}
+﻿{% extends 'base_right.html' %}
 {% load blog_tags comment_tags %}
 
 {% block description %}
-    <meta name="description" content="Xiyang的个人博客，记录生活的瞬间，分享学习的心得，感悟生活，留住感动，静静寻觅生活的美好"/>
+    <meta name="description" content="{% get_title category as c %}{{ c.description }}"/>
 {% endblock description %}
 {% block keywords %}
-    <meta name="keywords" content="Python,Django,Java,OpenDayLight,个人博客"/>
+    <meta name="keywords" content="{% get_title category as c %}{{ c.keywords }}"/>
 {% endblock keywords %}
-{% block title %}{% get_title category as c %}夕阳丨{{ c.name }}{% endblock title %}
+{% block title %}{% get_title category as c %}夕阳丨首页{% endblock title %}
 
 {% block body %}
     <div class="content-wrap">
@@ -65,7 +65,8 @@
             {% for article in page_obj %}
                 <article class="excerpt">
                     <header><a class="label label-important"
-                               href="/category/{{ article.category.bigcategory.name }}/{{ article.category.name|lower }}">{{ article.category.name }}<i class="label-arrow"></i></a>
+                               href="/category/{{ article.category.bigcategory.name }}/{{ article.category.name|lower }}">{{ article.category.name }}<i
+                            class="label-arrow"></i></a>
                         <h2><a target="_blank" href="/article/{{ article.slug }}"
                                title="{{ article.title }}">{{ article.title }} </a></h2>
                     </header>
@@ -77,13 +78,12 @@
                     </div>
                     <span class="note">{{ article.summary }}</span>
                     <p class="auth-span">
-                    <span class="muted"><i class="fa fa-user"></i>
-                        <a href="{% url 'accounts:profile' %}?next={{ request.path }}">{{ article.author }}</a>
-                    </span>
+                        <span class="muted"><i class="fa fa-user"></i>{{ article.author }}</span>
                         <span class="muted"><i class="fa fa-clock-o"></i> {{ article.create_date|date:'Y-m-d' }}</span>
                         <span class="muted"><i class="fa fa-eye"></i> {{ article.views }}浏览</span>
                         <span class="muted"><i class="fa fa-comments-o"></i>
-                        <a target="_blank" href="/article/{{ article.slug }}#comments">{% get_comment_count article.id article.id %}评论</a>
+                        <a target="_blank"
+                           href="/article/{{ article.slug }}#comments">{% get_comment_count article.id article.id %}评论</a>
                     </span>
                         <span class="muted"><a href="javascript:;" data-action="ding" data-id="{{ article.id }}"
                                                id="Addlike" class="action">
@@ -94,7 +94,6 @@
             {% empty %}
                 <div class="no-post">暂时还没有发布的文章！</div>
             {% endfor %}
-
             {% if is_paginated %}
                 <div class="pagination">
                     <ul>
@@ -124,8 +123,6 @@
                     </ul>
                 </div>
             {% endif %}
-
         </div>
     </div>
-
 {% endblock body %}

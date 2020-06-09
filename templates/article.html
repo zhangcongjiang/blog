@@ -18,21 +18,21 @@
                 <small>></small>
                 <a href="/category/{{ object.category.bigcategory.slug }}">{{ object.category.bigcategory.name }}</a>
                 <small>></small>
-                <a href="/category/{{ object.category.bigcategory.slug }}/{{ object.category.name|lower }}">{{ object.category.name }}</a>
+                <a href="/category/{{ object.category.bigcategory.slug }}/{{ object.category.slug|lower }}">{{ object.category.name }}</a>
                 <small>></small>
                 <span class="muted">{{ object.title }}</span>
             </div>
             <header class="article-header">
                 <h1 class="article-title"><a href="/article/{{ object.slug }}">{{ object.title }}</a></h1>
                 <div class="meta">
-                    <span id="mute-category" class="muted">
-                        <i class="fa fa-list-alt"></i>
-                        <a href="category/technique/{{ object.category.name|lower }}"> {{ object.category.name }}</a>
-                    </span>
-                    <span class="muted">
-                        <i class="fa fa-user"></i>
-                        <a href="/author/{{ object.author.name }}">{{ object.author }}</a>
-                    </span>
+{#                    <span id="mute-category" class="muted">#}
+{#                        <i class="fa fa-list-alt"></i>#}
+{#                        <a href="category/technique/{{ object.category.name|lower }}"> {{ object.category.name }}</a>#}
+{#                    </span>#}
+{#                    <span class="muted">#}
+{#                        <i class="fa fa-user"></i>#}
+{#                        <a href="/author/{{ object.author.name }}">{{ object.author }}</a>#}
+{#                    </span>#}
                     <time class="muted"><i class="fa fa-clock-o"></i> {{ object.create_date|date:'y-m-d' }}</time>
                     <span class="muted"><i class="fa fa-eye"></i> {{ object.views }}浏览</span>
                     <span class="muted">
