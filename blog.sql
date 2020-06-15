@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80012
 File Encoding         : 65001
 
-Date: 2020-06-12 16:12:36
+Date: 2020-06-15 16:09:38
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -318,7 +318,7 @@ CREATE TABLE `comment_articlecomment` (
   CONSTRAINT `comment_articlecomme_parent_id_f0ab594d_fk_comment_a` FOREIGN KEY (`parent_id`) REFERENCES `comment_articlecomment` (`id`),
   CONSTRAINT `comment_articlecomme_rep_to_id_84dab3d5_fk_comment_a` FOREIGN KEY (`rep_to_id`) REFERENCES `comment_articlecomment` (`id`),
   CONSTRAINT `comment_articlecomment_belong_id_58e0232c_fk_storm_article_id` FOREIGN KEY (`belong_id`) REFERENCES `storm_article` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of comment_articlecomment
@@ -330,6 +330,7 @@ INSERT INTO `comment_articlecomment` VALUES ('24', '2020-05-13 15:40:04', 'bbbb'
 INSERT INTO `comment_articlecomment` VALUES ('25', '2020-05-13 16:26:12', 'rui', '27', '13', '22', null);
 INSERT INTO `comment_articlecomment` VALUES ('26', '2020-05-13 16:26:33', 'fgkk', '26', '13', '25', null);
 INSERT INTO `comment_articlecomment` VALUES ('27', '2020-05-14 15:50:37', ' :cool: ', '26', '14', null, null);
+INSERT INTO `comment_articlecomment` VALUES ('28', '2020-06-15 08:54:34', '54yt', '28', '16', null, null);
 
 -- ----------------------------
 -- Table structure for comment_commentuser
@@ -341,13 +342,14 @@ CREATE TABLE `comment_commentuser` (
   `email` varchar(30) NOT NULL,
   `address` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of comment_commentuser
 -- ----------------------------
 INSERT INTO `comment_commentuser` VALUES ('26', 'songbo', '847634038@qq.com', '');
 INSERT INTO `comment_commentuser` VALUES ('27', 'zhangcongjiang', '847634038@qq.com', '');
+INSERT INTO `comment_commentuser` VALUES ('28', 'admin', '847634038@qq.com', '');
 
 -- ----------------------------
 -- Table structure for comment_messagecomment
@@ -391,7 +393,7 @@ CREATE TABLE `django_admin_log` (
   KEY `django_admin_log_user_id_c564eba6_fk_oauth_ouser_id` (`user_id`),
   CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
   CONSTRAINT `django_admin_log_user_id_c564eba6_fk_oauth_ouser_id` FOREIGN KEY (`user_id`) REFERENCES `oauth_ouser` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=162 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=198 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of django_admin_log
@@ -557,6 +559,42 @@ INSERT INTO `django_admin_log` VALUES ('158', '2020-06-12 15:28:44', '5', 'Album
 INSERT INTO `django_admin_log` VALUES ('159', '2020-06-12 15:29:00', '6', 'Album object (6)', '1', '[{\"added\": {}}]', '27', '1');
 INSERT INTO `django_admin_log` VALUES ('160', '2020-06-12 15:29:13', '7', 'Album object (7)', '1', '[{\"added\": {}}]', '27', '1');
 INSERT INTO `django_admin_log` VALUES ('161', '2020-06-12 15:29:34', '8', 'Album object (8)', '1', '[{\"added\": {}}]', '27', '1');
+INSERT INTO `django_admin_log` VALUES ('162', '2020-06-15 10:48:55', '20', 'Java内存泄露是如何发生的', '1', '[{\"added\": {}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('163', '2020-06-15 10:49:43', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('164', '2020-06-15 10:50:47', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('165', '2020-06-15 10:52:15', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('166', '2020-06-15 10:52:54', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('167', '2020-06-15 10:53:58', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('168', '2020-06-15 10:54:33', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('169', '2020-06-15 10:55:01', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('170', '2020-06-15 11:01:37', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('171', '2020-06-15 11:01:57', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('172', '2020-06-15 11:02:17', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('173', '2020-06-15 11:02:47', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('174', '2020-06-15 11:03:45', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('175', '2020-06-15 11:04:03', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('176', '2020-06-15 11:05:26', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('177', '2020-06-15 11:05:48', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('178', '2020-06-15 11:08:34', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('179', '2020-06-15 11:08:45', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('180', '2020-06-15 11:09:12', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('181', '2020-06-15 11:14:05', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('182', '2020-06-15 11:14:35', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('183', '2020-06-15 11:17:58', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('184', '2020-06-15 11:19:10', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('185', '2020-06-15 11:19:36', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('186', '2020-06-15 11:20:04', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('187', '2020-06-15 13:42:18', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('188', '2020-06-15 13:43:07', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('189', '2020-06-15 13:44:06', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('190', '2020-06-15 13:49:06', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('191', '2020-06-15 14:12:48', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('192', '2020-06-15 15:31:06', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('193', '2020-06-15 16:03:35', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('194', '2020-06-15 16:04:04', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('195', '2020-06-15 16:04:40', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('196', '2020-06-15 16:06:14', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
+INSERT INTO `django_admin_log` VALUES ('197', '2020-06-15 16:06:52', '20', 'Java内存泄露是如何发生的', '2', '[{\"changed\": {\"fields\": [\"\\u6587\\u7ae0\\u5185\\u5bb9\"]}}]', '6', '1');
 
 -- ----------------------------
 -- Table structure for django_content_type
@@ -687,7 +725,7 @@ INSERT INTO `django_session` VALUES ('fj86g0tgmmvjt3p958qjkl6y6y1r7xt3', 'YTYwOW
 INSERT INTO `django_session` VALUES ('gnx1va3xie6b24jvb1schuo714as26qa', 'NmVlZDA1Y2Y0MWY2ODMxMTE5OTk4Mzc3MDQ2NThlYzNmN2JhMGJiNjp7ImlzX3JlYWRfMTQiOjE1ODk0NDE5NDkuNjEyMDg5NiwiaXNfcmVhZF8xMyI6MTU4OTQ0MjA5OS41ODYyNTk2LCJpc19yZWFkXzEyIjoxNTg5NDQyMTQzLjg1MTAzMiwibmljayI6InNvbmdibyIsInRpZCI6MjZ9', '2020-05-28 15:50:37');
 INSERT INTO `django_session` VALUES ('hb9a0x0xo4cs46cxybjpyb4ehm6ll9co', 'YmFmNWI5OTRiZTU2MjEyOGNjMGE3MmNhYzc5M2NkOGUwNDU3YzU5MTp7ImlzX3JlYWRfMTUiOjE1ODk5Njc3OTkuODM1ODMzNX0=', '2020-06-03 17:43:20');
 INSERT INTO `django_session` VALUES ('hs4jjdgc1ndsh1qb48d1h8gdye1ymrvg', 'YWY3ZGE2NTAwODgwMjQxMzNlOWNmNDRjNTE5ZTYzNGY5M2IzMDU5Zjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmZGQ2ZWQ2MWExNTk4NWUzMjdkNzZiYzcxNmEwZTFlOTFmMTc1MjMzIn0=', '2020-06-02 09:19:13');
-INSERT INTO `django_session` VALUES ('iuyy1u45t3zzbdsbhb28x4v4czdbyjw4', 'YWY3ZGE2NTAwODgwMjQxMzNlOWNmNDRjNTE5ZTYzNGY5M2IzMDU5Zjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmZGQ2ZWQ2MWExNTk4NWUzMjdkNzZiYzcxNmEwZTFlOTFmMTc1MjMzIn0=', '2020-06-26 15:42:40');
+INSERT INTO `django_session` VALUES ('iuyy1u45t3zzbdsbhb28x4v4czdbyjw4', 'MTYyNjY4YjAxNGI5NGUzYzVhNGIyOWI3Y2Q5YWZmMDFiZGUwMmU1OTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmZGQ2ZWQ2MWExNTk4NWUzMjdkNzZiYzcxNmEwZTFlOTFmMTc1MjMzIiwibmljayI6ImFkbWluIiwidGlkIjoyOH0=', '2020-06-29 08:54:34');
 INSERT INTO `django_session` VALUES ('la5zrtmcex0ljs2ww75hcc2j50c0s37i', 'YWY3ZGE2NTAwODgwMjQxMzNlOWNmNDRjNTE5ZTYzNGY5M2IzMDU5Zjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmZGQ2ZWQ2MWExNTk4NWUzMjdkNzZiYzcxNmEwZTFlOTFmMTc1MjMzIn0=', '2020-05-21 16:29:06');
 INSERT INTO `django_session` VALUES ('na6z8p84bwxndlqrv9qcliwb2ksl0vfc', 'NTZhNmY3OGMzYTYwYWRlYWM3NWMzYTcwMmI5NWQ5YjdhNTExNGQ4Zjp7ImlzX3JlYWRfMTMiOjE1ODkzNTU4MTMuODYxOTg0NywiaXNfcmVhZF8xMiI6MTU4OTM1NTgzMS41NDc3MjN9', '2020-05-27 15:43:52');
 INSERT INTO `django_session` VALUES ('oaua1waqtm0mgimsp3s80chnxy3w4rck', 'MDczYTkyZDg4OWRjNWM5NzhhZjI3YTJjOTFlNmZmOTk4NDkxMjQxYzp7ImlzX3JlYWRfMSI6MTU1MTUzMDY4Ni44MzMwNTl9', '2019-03-16 20:44:47');
@@ -916,7 +954,7 @@ CREATE TABLE `storm_article` (
   KEY `storm_article_category_id_c56e32c4_fk_storm_category_id` (`category_id`),
   CONSTRAINT `storm_article_author_id_113892f7_fk_oauth_ouser_id` FOREIGN KEY (`author_id`) REFERENCES `oauth_ouser` (`id`),
   CONSTRAINT `storm_article_category_id_c56e32c4_fk_storm_category_id` FOREIGN KEY (`category_id`) REFERENCES `storm_category` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of storm_article
@@ -929,6 +967,7 @@ INSERT INTO `storm_article` VALUES ('16', 'Java NIO：IO与NIO的区别', 'NIO�
 INSERT INTO `storm_article` VALUES ('17', 'python使用paramiko配置交换机执行多条命令', '我们知道，通过SSH服务可以远程连接到Linux服务器，查看上面的日志状态，批量配置远程服务器，文件上传，文件下载等，Python的paramiko模块同样实现了这一功能。', '###paramiko是用python语言写的一个模块，遵循SSH2协议，支持以加密和认证的方式，进行远程服务器的连接。\r\n\r\n        由于使用的是python这样的能够跨平台运行的语言，所以所有python支持的平台，如Linux, Solaris, BSD, MacOS X, Windows等，paramiko都可以支持，因此，如果需要使用SSH从一个平台连接到另外一个平台，进行一系列的操作时，paramiko可以说是最佳工具。\r\n        如下代码展示了通过Python给交换机下发创建vrf的配置，主要用来测试交换机能够配置vrf的最大条目数以及配置所用时长。\r\n\r\n```\r\nimport paramiko\r\nimport datetime\r\n\r\nfor i in range(223,65535):\r\n#创建SSH对象\r\n    ssh = paramiko.SSHClient()\r\n\r\n    #把要连接的机器添加到known_hosts文件中\r\n    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())\r\n\r\n    #连接服务器\r\n    ssh.connect(hostname=\'172.20.1.142\', port=22, username=\'admin\', password=\'admin\')\r\n\r\n    cmds = []\r\n    cmd = \'configure terminal\'\r\n    cmds.append(cmd)\r\n    cmd = \'vrf context test_\'+str(i)\r\n    cmds.append(cmd)\r\n    cmd = \'end\'\r\n    cmds.append(cmd)\r\n\r\n    str_value = \' ;\'.join(cmds)\r\n    print(str_value)\r\n    # #cmd = \'ls -l;ifconfig\'       #多个命令用;隔开\r\n    try:\r\n        start = datetime.datetime.now()\r\n        stdin, stdout, stderr = ssh.exec_command(str_value) \r\n        result = stdout.read()\r\n\r\n        if not result:\r\n            result = stderr.read()  \r\n        ssh.close()\r\n        end = datetime.datetime.now()\r\n        print(end- start)\r\n        print(result.decode())\r\n    except EOFError:\r\n        print(\"EOFError\")\r\n\r\n\r\n```', '/static/images/summary.jpg', '2020-06-08 16:38:17', '2020-06-09 11:08:55', '1', 'paramiko', '1', '1', '1');
 INSERT INTO `storm_article` VALUES ('18', '思科模拟器开局配置', '作为一名网络工程师，经常需要调试各种设备，面对各种设备的开局配置，下面就思科的CSR-1000V模拟器为例，展示一下一个全新的模拟器需要经过哪些配置才能使用CRT远程连接。', '###1、配置IP地址\r\n<div align=center>![配置IP地址](/static/images/configIp.png)</div>  \r\n\r\n###2、配置用户名密码\r\n<div align=center>![配置用户名密码](/static/images/configUser.png)</div>  \r\n\r\n##3、配置SSH\r\n<div align=center>![配置SSH](/static/images/configSSH.png)</div>\r\n\r\n        如果还是无法通过SSH连接上，可能就是本地PC和模拟器不在同一个IP地址段，那么需要添加静态路由配置。\r\n        ip route 0.0.0.0/0 172.20.0.1', '/static/images/summary.jpg', '2020-06-09 09:30:43', '2020-06-09 11:08:52', '1', 'configCSR1000v', '1', '9', '1');
 INSERT INTO `storm_article` VALUES ('19', 'Unity3d开发贪吃蛇', 'Unity3D是一个让你轻松创作的多平台的游戏开发工具，是一个全面整合的专业游戏引擎。《王者荣耀》、《神庙逃亡》、《炉石传说》等优秀的游戏均是采用Unity3d引擎进行开发的，下面我们使用Unity3d开发一款经典的游戏“贪吃蛇”，并对Unity3d做一个简单的介绍。', '###1、Unity3d引擎简介\r\n###2、游戏边框\r\n###3、游戏脚本', '/static/images/summary.jpg', '2020-06-12 15:19:04', '2020-06-12 15:22:40', '0', 'u3d_snake', '1', '10', '1');
+INSERT INTO `storm_article` VALUES ('20', 'Java内存泄露是如何发生的', 'JVM是Java程序的核心优势之一，它是一种开箱即用的内存管理。在编写Java程序时，我们可以自由创建对象，Java Garbage Collector（垃圾回收器）负责为我们分配和释放内存。但是，Java应用程序中仍然可能发生内存泄漏。', '## **1. 什么是内存泄露？**\r\n\r\n内存泄漏的标准定义是**当应用程序不再使用对象，但是垃圾回收器无法将它们从工作内存中删除时**发生的一种情况， 因为它们仍在被引用。结果，应用程序消耗了越来越多的资源，最终导致致命的OutOfMemoryError。\r\n\r\n为了更好地理解该概念，下面是一个简单的视觉表示：\r\n<div align=center>![内训溢出](/static/images/oom.jpg)</div>\r\n\r\n如我们所见，我们有两种类型的对象–引用对象和未引用对象；垃圾收集器可以删除未引用的对象。引用的对象将不会被收集，即使应用程序实际上不再使用它们也是如此。  \r\n检测内存泄漏可能很困难。许多工具执行静态分析来确定潜在的泄漏，但是这些技术并不完美，因为最重要的方面是正在运行的系统的实际运行时行为。  \r\n所以，让我们的一些标准做法，专注的神情避免了内存泄露，通过分析一些常见的场景。\r\n\r\n## **2. 内存泄漏是如何发生的？**\r\n        接下来我们将介绍几种经典的内存泄露发生场景，首先我们需要修改JVM的堆内存大小，使用“Xms<size>”和“-Xmx<size>”分别指定初始Java堆大小以及最大堆大小，我们调小这些参数有助于制造出内存泄露异常。\r\n### ①. static关键字的错误使用\r\n我们看一个例子：\r\n\r\n```\r\nprivate Random random = new Random();\r\npublic static final ArrayList<Double> list = new ArrayList<Double>(1000000);\r\n\r\n@Test\r\npublic void givenStaticField_whenLotsOfOperations_thenMemoryLeak() throws InterruptedException {\r\n    for (int i = 0; i < 1000000; i++) {\r\n        list.add(random.nextDouble());\r\n    }\r\n    \r\n    System.gc();\r\n    Thread.sleep(10000); // to allow GC do its job\r\n}\r\n```  \r\n        我们定义了一个静态链表并初始化了其容量为1000000，并向其中添加了一百万条数据，众所周知，静态变量不会被gc回收，会存在于JVM的整个生命周期，此种方法很容易造成内存泄露，要避免static参数带来的内存泄露风险，我们需要着重关注static关键字修饰的集合和重对象。\r\n\r\n### ②. 在长字符串上调用String.intern()  \r\n我们看一个例子\r\n```\r\n@Test\r\npublic void givenLengthString_whenIntern_thenOutOfMemory() throws IOException, InterruptedException {\r\n    Thread.sleep(15000);\r\n    String str = new Scanner(new File(\"src/test/resources/large.txt\"), \"UTF-8\").useDelimiter(\"\\\\A\").next();\r\n    str.intern();\r\n    \r\n    System.gc(); \r\n    Thread.sleep(15000);\r\n}\r\n```\r\n        以上代码中，我们试图读取一个大文件，并调用String.intern()方法规范化，这步操作将会文件读取到永久代内存PermGen中，导致gc获取不到足够的内存，由此引发内存溢出，如果我们的程序中需要大量处理很长的字符串，我们可以在JVM中通过如下参数“-XX:MaxPermSize=<size>XX:MaxPermSize=<size>”增加永久代内存的大小；\r\n        在Java-8中，永久代内存空间被元空间Metaspace取代，调用String.intern()方法将不会造成内存溢出。\r\n\r\n### ③. 未封闭的流\r\n我们看一个例子：\r\n```\r\n@Test(expected = OutOfMemoryError.class)\r\npublic void givenURL_whenUnclosedStream_thenOutOfMemory() throws IOException, URISyntaxException  {\r\n    String str = \"\";\r\n    URLConnection conn = new URL(\"http://norvig.com/big.txt\").openConnection();\r\n    BufferedReader br = new BufferedReader(\r\n      new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));\r\n    while (br.readLine() != null)  {\r\n        str += br.readLine();\r\n    } \r\n}\r\n```\r\n        上述代码中，我们使用Stream去获取big.txt的内容，但是没有关闭Stream,这种内存泄露在Java8中引入了自动关闭功能，如下：BufferedReader将在try语句的末尾自动关闭。\r\n```\r\ntry (BufferedReader br = new BufferedReader( \r\n  new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8))) {\r\n    // further implementation\r\n} catch (IOException e) {\r\n    e.printStackTrace();\r\n}\r\n```\r\n\r\n### ④. 未关闭的链接\r\n这种情况与前一种情况非常相似，主要区别是处理未关闭的连接（例如，到数据库，到FTP服务器等）。再次，不正确的实现会造成很多危害，从而导致内存问题。让我们看一个简单的例子：\r\n```\r\n@Test(expected = OutOfMemoryError.class)\r\npublic void givenConnection_whenUnclosed_thenOutOfMemory() throws IOException, URISyntaxException {\r\n    \r\n    URL url = new URL(\"ftp://speedtest.tele2.net\");\r\n    URLConnection urlc = url.openConnection();\r\n    InputStream is = urlc.getInputStream();\r\n    String str = \"\";\r\n    //\r\n}\r\n```\r\n### ⑤. 将没有hashCode（）和equals（）的对象添加到HashSet中\r\n首先我们创建一个不包含equals或hashCode的简单类：\r\n```\r\npublic class Key { \r\n    public String key;\r\n    \r\n    public Key(String key) {\r\n        Key.key = key;\r\n    }\r\n}\r\n```\r\n然后我们看一下使用场景：\r\n```\r\n@Test(expected = OutOfMemoryError.class)\r\npublic void givenMap_whenNoEqualsNoHashCodeMethods_thenOutOfMemory()\r\n  throws IOException, URISyntaxException {\r\n    Map<Object, Object> map = System.getProperties();\r\n    while (true) {\r\n        map.put(new Key(\"key\"), \"value\");\r\n    }\r\n}\r\n```\r\n        在这个例子中，我们无限往Map中写入Key，因为Key没有重写hashCode和toString()方法，所以Map无法忽略重复项，Map中的数据会无限增长，由此导致内存溢出。\r\n\r\n## ** 3. 如何在您的应用程序中查找泄漏源？**\r\n详情可以参考：[定位内存泄露](https://blog.csdn.net/bigtree_3721/article/details/50550248).', '/static/images/summary.jpg', '2020-06-15 10:48:54', '2020-06-15 16:06:52', '0', 'oom', '1', '2', '0');
 
 -- ----------------------------
 -- Table structure for storm_article_keywords
@@ -943,7 +982,7 @@ CREATE TABLE `storm_article_keywords` (
   KEY `storm_article_keywords_keyword_id_a563777a_fk_storm_keyword_id` (`keyword_id`),
   CONSTRAINT `storm_article_keywords_article_id_5df25258_fk_storm_article_id` FOREIGN KEY (`article_id`) REFERENCES `storm_article` (`id`),
   CONSTRAINT `storm_article_keywords_keyword_id_a563777a_fk_storm_keyword_id` FOREIGN KEY (`keyword_id`) REFERENCES `storm_keyword` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of storm_article_keywords
@@ -956,6 +995,7 @@ INSERT INTO `storm_article_keywords` VALUES ('7', '16', '3');
 INSERT INTO `storm_article_keywords` VALUES ('8', '17', '1');
 INSERT INTO `storm_article_keywords` VALUES ('9', '18', '6');
 INSERT INTO `storm_article_keywords` VALUES ('10', '19', '7');
+INSERT INTO `storm_article_keywords` VALUES ('11', '20', '3');
 
 -- ----------------------------
 -- Table structure for storm_article_tags
@@ -970,7 +1010,7 @@ CREATE TABLE `storm_article_tags` (
   KEY `storm_article_tags_tag_id_e8380d38_fk_storm_tag_id` (`tag_id`),
   CONSTRAINT `storm_article_tags_article_id_15b9f147_fk_storm_article_id` FOREIGN KEY (`article_id`) REFERENCES `storm_article` (`id`),
   CONSTRAINT `storm_article_tags_tag_id_e8380d38_fk_storm_tag_id` FOREIGN KEY (`tag_id`) REFERENCES `storm_tag` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of storm_article_tags
@@ -983,6 +1023,7 @@ INSERT INTO `storm_article_tags` VALUES ('13', '16', '3');
 INSERT INTO `storm_article_tags` VALUES ('14', '17', '1');
 INSERT INTO `storm_article_tags` VALUES ('15', '18', '6');
 INSERT INTO `storm_article_tags` VALUES ('16', '19', '8');
+INSERT INTO `storm_article_tags` VALUES ('17', '20', '3');
 
 -- ----------------------------
 -- Table structure for storm_bigcategory
