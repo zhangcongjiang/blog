@@ -17,27 +17,6 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.contrib.sitemaps.views import sitemap
-from rest_framework.routers import DefaultRouter
-
-from api import views as api_views
-from storm.feeds import AllArticleRssFeed
-from storm.sitemaps import ArticleSitemap, CategorySitemap, TagSitemap
-
-if settings.API_FLAG:
-    router = DefaultRouter()
-    router.register(r'users', api_views.UserListSet)
-    router.register(r'articles', api_views.ArticleListSet)
-    router.register(r'album', api_views.AlbumListSet)
-    router.register(r'tags', api_views.TagListSet)
-    router.register(r'categorys', api_views.CategoryListSet)
-
-# 网站地图
-sitemaps = {
-    'articles': ArticleSitemap,
-    'tags': TagSitemap,
-    'categories': CategorySitemap
-}
 
 urlpatterns = [
                   url(r'^admin/', admin.site.urls),
@@ -47,9 +26,7 @@ urlpatterns = [
                   url('', include('storm.urls', namespace='blog')),  # blog
                   # 评论
                   url(r'^comment/', include('comment.urls', namespace='comment')),  # comment
-                  url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
-                  # 网站地图
-                  url(r'^feed/$', AllArticleRssFeed(), name='rss'),  # rss订阅
+
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # 加入这个才能显示media文件
 
 if settings.API_FLAG:
