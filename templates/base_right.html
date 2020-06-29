@@ -100,7 +100,7 @@
                 <div class="widget d_postlist">
                     <div class="title"><h2>猜你喜欢</h2></div>
                     <ul>
-                        {% get_article_list 'loves' 6 as hot_tag %}
+                        {% get_article_list 'loves' 5 as hot_tag %}
                         {% for hot in hot_tag %}
                         <li>
                             <a href="/article/{{ hot.slug }} " title="{{ hot.title }}"><span class="thumbnail"><img
