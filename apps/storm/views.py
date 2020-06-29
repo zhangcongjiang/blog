@@ -258,9 +258,6 @@ def AlbumView(request):
     return render(request, 'album.html', {'category': 'albumn'})
 
 
-def DonateView(request):
-    return render(request, 'donate.html', {'category': 'donate'})
-
 
 def ProjectView(request):
     return render(request, 'project.html', {'category': 'project'})

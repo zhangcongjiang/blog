@@ -1,5 +1,6 @@
 ﻿{% extends 'base_right.html' %}
 {% load blog_tags static %}
+{% load comment_tags %}
 {% block title %}{{ object.title }}{% endblock title %}
 {% block description %}
     <meta name="description" content="{{ object.summary }}"/>
@@ -37,8 +38,12 @@
                     <span class="muted"><i class="fa fa-eye"></i> {{ object.views }}浏览</span>
                     <span class="muted">
                         <i class="fa fa-comments-o"></i>
-                        <a href="/article/{{ object.slug }}#respond">0评论</a>
+                        <a href="/article/{{ object.slug }}#respond">{% get_comment_count object.id object.id %}评论</a>
                     </span>
+                    <span class="muted">
+                        <i class="fa fa-heart-o"></i>
+                        <a href="javascript:;" data-action="ding" data-id="{{ object.id }}" id="Addlike">
+                            <span class="count">{{ object.loves }}</span>喜欢</a></span>
                 </div>
             </header>
             <article class="article-content">

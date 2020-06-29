@@ -6276,12 +6276,12 @@ a.badge-inverse:hover .label-arrow, a.label-inverse:hover .label-arrow {
 }
 
 #Addlike {
-    background-color: #f78585;
-    color: #fff
+    /*background-color: #f78585;*/
+    color: #f78585
 }
 
 #Addlike:hover {
-    background-color: #f17067
+    /*background-color: #f17067*/
 }
 
 .action {

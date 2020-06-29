@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from .views import (IndexView, DetailView, MessageView, AboutView, DonateView, ProjectView, QuestionView,
+from .views import (IndexView, DetailView, MessageView, AboutView, ProjectView, QuestionView,
                     MySearchView, LoveView, LinkView, AlbumView)
 
 app_name = 'blog'
@@ -10,7 +10,6 @@ urlpatterns = [
     url(r'^link/$', LinkView, name='link'),  # 申请友情链接
     url(r'^category/message/$', MessageView, name='message'),
     url(r'^category/about/$', AboutView, name='about'),
-    url(r'^category/donate/$', DonateView, name='donate'),
     url(r'^category/album/$', AlbumView, name='album'),
     url(r'^category/project/$', ProjectView, name='project'),
     url(r'^category/question/$', QuestionView, name='question'),

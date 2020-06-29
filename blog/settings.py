@@ -91,11 +91,11 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'root',
         'NAME': 'blog',
-        # 避免映射数据库时出现警告
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            'charset': 'utf8mb4',
-        },
+        # # 避免映射数据库时出现警告
+        # 'OPTIONS': {
+        #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        #     'charset': 'utf8mb4',
+        # },
     }
 }
 # Password validation
