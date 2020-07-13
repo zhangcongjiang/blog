@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="baidu-tc-verification" content="0fb041a64ee71333c957d8c784961cc8"/>
+    <meta name="baidu-site-verification" content="qD1eKbdepu" />
     <meta property="qc:admins" content="145637425211673116375"/>
     <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
     <meta name="viewport"
@@ -92,7 +92,7 @@
     {% block head %}{% endblock head %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type='text/css'>
     <link href="/static/css/all.min.css" rel="stylesheet">
-    <link href="/static/css/hover.min.css" rel="stylesheet">
+<!--    <link href="/static/css/hover.min.css" rel="stylesheet">  -->
     {##}
     {##}
     {#    <link rel="stylesheet" href="/static/css/monokai.css">#}
@@ -113,8 +113,8 @@
     <link rel='stylesheet' id='l2h_print_style-css' href='{% static 'css/print.min.css' %}' type='text/css'
           media='print'/>
     <link rel='stylesheet' id='style-css' href='{% static 'css/style.css' %}' type='text/css' media='all'/>
-    <link rel='stylesheet' id='style-css' href='{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}'
-          type='text/css' media='all'/>
+<!--    <link rel='stylesheet' id='style-css' href='{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}'
+         type='text/css' media='all'/>     -->
     <link rel="stylesheet" href="{% static 'highlights/github.css' %}">
     <script type='text/javascript' src='{% static 'js/jquery.min.js' %}'></script>
 
@@ -174,13 +174,16 @@
     <!--[if lt IE 9]><script src="{% static 'js/html5.js' %}"></script><![endif]-->
 
     <!--百度统计-->
-    <meta name="360-site-verification" content="bdc579accc68a98f1258ebcce2266afa"/>
-    <script type="text/javascript" name="baidu-tc-cerfication" data-appid="5411405"
-            src="{% static 'js/lightapp.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
-    <script type="text/javascript"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?546b72ca15a2da7ee4fd5eaccd41dd51";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
-    <link href="/static/css/github.min.css" rel="stylesheet">
     <style>
         pre {
             /*控制代码不换行*/
@@ -372,11 +375,12 @@
         })
     });
 </script>
-<script src="/static/css/highlight.min.js"></script>
+<!--  <script src="/static/css/highlight.min.js"></script>
 <script>
     hljs.initHighlightingOnLoad();
     hljs.initLineNumbersOnLoad();
-</script>
+</script>  -->
+<link href="/static/css/hover.min.css" rel="stylesheet">
 </body>
 </html>
 <!-- Dynamic page generated in 1.148 seconds. -->

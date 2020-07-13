@@ -92,7 +92,7 @@ DATABASES = {
         'PASSWORD': 'root',
         'NAME': 'blog',
         # # 避免映射数据库时出现警告
-        # 'OPTIONS': {
+       # 'OPTIONS': {
         #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         #     'charset': 'utf8mb4',
         # },
@@ -137,9 +137,9 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+   os.path.join(BASE_DIR, 'static')
 ]
-
+# STATIC_ROOT = '/data/myblog/blog/static'
 # 媒体文件收集
 MEDIA_URL = "/media/"  # 媒体文件别名(相对路径) 和 绝对路径
 MEDIA_ROOT = (
@@ -160,12 +160,12 @@ HAYSTACK_CONNECTIONS = {
 # 自动更新索引
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
-SITE_DESCRIPTION = "StormSha的个人网站，记录生活的瞬间，分享学习的心得，感悟生活，留住感动，静静寻觅生活的美好"
+SITE_DESCRIPTION = "夕阳的个人网站，交流SDN软件定义网络、Java编程，Python编程，Unity3d相关技术"
 
 # 网站关键词，用于SEO
-SITE_KEYWORDS = "网络,IT,技术,博客,Python"
+SITE_KEYWORDS = "SDN,Java,Python,Unity3d"
 
-SITE_END_TITLE = "聚会阅读器"
+# SITE_END_TITLE = "聚会阅读器"
 
 API_FLAG = True
 # 自定义用户model

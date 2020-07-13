@@ -17,7 +17,7 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
-
+from django.views import static
 urlpatterns = [
                   url(r'^admin/', admin.site.urls),
                   # 用户
@@ -26,8 +26,8 @@ urlpatterns = [
                   url('', include('storm.urls', namespace='blog')),  # blog
                   # 评论
                   url(r'^comment/', include('comment.urls', namespace='comment')),  # comment
-
-              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # 加入这个才能显示media文件
+	  	  url(r'^static/(?P<path>.*)$',static.serve, {'document_root': settings.STATIC_ROOT,}),
+              ]
 
 if settings.API_FLAG:
     url(r'^api/v1/', include('api.urls', namespace='api'))

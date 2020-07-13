@@ -7,7 +7,7 @@
 {% block keywords %}
     <meta name="keywords" content="{% get_title category as c %}{{ c.keywords }}"/>
 {% endblock keywords %}
-{% block title %}{% get_title category as c %}夕阳丨首页{% endblock title %}
+{% block title %}{% get_title category as c %}SDN软件定义网络知识分享及Java/Python编程{% endblock title %}
 
 {% block body %}
     <div class="content-wrap">
@@ -78,7 +78,7 @@
                     </div>
                     <span class="note">{{ article.summary }}</span>
                     <p class="auth-span">
-                        <span class="muted"><i class="fa fa-user"></i>{{ article.author }}</span>
+                       {# <span class="muted"><i class="fa fa-user"></i>{{ article.author }}</span> #}
                         <span class="muted"><i class="fa fa-clock-o"></i> {{ article.create_date|date:'Y-m-d' }}</span>
                         <span class="muted"><i class="fa fa-eye"></i> {{ article.views }}浏览</span>
                         <span class="muted"><i class="fa fa-comments-o"></i>
