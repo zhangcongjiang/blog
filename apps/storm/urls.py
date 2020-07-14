@@ -1,13 +1,13 @@
 from django.conf.urls import url
 
 from .views import (IndexView, DetailView, MessageView, AboutView, ProjectView, QuestionView,
-                    MySearchView, LoveView, LinkView, AlbumView)
+                    MySearchView, LoveView, AlbumView)
 
 app_name = 'blog'
 urlpatterns = [
     # 首页
     url(r'^$', IndexView.as_view(template_name='index.html'), name='index'),  # 主页，自然排序
-    url(r'^link/$', LinkView, name='link'),  # 申请友情链接
+    # url(r'^link/$', LinkView, name='link'),  # 申请友情链接
     url(r'^category/message/$', MessageView, name='message'),
     url(r'^category/about/$', AboutView, name='about'),
     url(r'^category/album/$', AlbumView, name='album'),

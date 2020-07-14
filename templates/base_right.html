@@ -121,7 +121,7 @@
                 <div class="d_tags">
                     {% get_tag_list as tags %}
                     {% for tag in tags %}
-                        <a title="{{ tag.total_num }}个话题" href="{% url 'blog:tag' tag.name %}">{{ tag.name }} ({{ tag.total_num }})</a>
+                        <a title="{{ tag.total_num }}个话题" href="{% url 'blog:tag' tag.slug %}">{{ tag.name }} ({{ tag.total_num }})</a>
                     {% endfor %}
                 </div>
             </div>

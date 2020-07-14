@@ -57,7 +57,7 @@ class IndexView(generic.ListView):
             queryset = get_list_or_404(queryset, create_date__year=year, create_date__month=month)
 
         if tag:
-            tags = get_object_or_404(Tag, name=tag)
+            tags = get_object_or_404(Tag, slug=tag)
             self.big_slug = BigCategory.objects.filter(category__article__tags=tags)
             self.big_slug = self.big_slug[0].slug
             queryset = queryset.filter(tags=tags)
@@ -246,8 +246,8 @@ def MessageView(request):
     return render(request, 'message.html', {'category': 'message'})
 
 
-def LinkView(request):
-    return render(request, 'link.html')
+# def LinkView(request):
+#     return render(request, 'link.html')
 
 
 def AboutView(request):
